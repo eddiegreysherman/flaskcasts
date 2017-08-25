@@ -51,7 +51,7 @@ class Post(object):
         self.title = title
         self.content = content
         self.author = author
-        self.created = datetime.datetime.utcnow().strftime('%A %x @ %H:%M') \
+        self.created = datetime.datetime.utcnow().strftime('%A %x @ %H:%M:%S') \
             if created is None else created
 
     def __repr__(self):

@@ -1,5 +1,3 @@
-{% extends 'home/layout.html' %}
-
 {# Jinja2 macro #}
 {% macro paginate(pagination, destination, small=False) %}
     {% if pagination.num_pages > 1 %}
@@ -27,6 +25,9 @@
     {% endif %}
 {% endmacro %}
 
+
+
+{% extends 'home/layout.html' %}
 {% block content %}
 
     <h1>Flask Casts!</h1>

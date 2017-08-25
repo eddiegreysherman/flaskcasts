@@ -1,2 +1,2 @@
 DEBUG = True
-MONGO_DBNAME = 'blog'
+MONGO_DBNAME = 'flaskcasts'
