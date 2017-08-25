@@ -1,6 +1,44 @@
 {% extends 'home/layout.html' %}
+
+{# Jinja2 macro #}
+{% macro paginate(pagination, destination, small=False) %}
+    {% if pagination.num_pages > 1 %}
+        <ul class="pagination {% if small %}pagination-sm{% endif %}" id="pagination">
+            <li {% if not pagination.has_prev %}class="disabled">
+                <a href="">&laquo;</a>
+                {% else %}>
+                <a href="{{ url_for(destination) }}?page={{ pagination.prev_page }}">&laquo;</a>
+                {%  endif %}
+            </li>
+
+            {% for i in range(1, pagination.num_pages + 1) %}
+                <li {% if paginated_posts.page == i %}class="active"{% endif %}>
+                    <a href="{{ url_for(destination) }}?page={{ i }}">{{ i }}</a>
+                </li>
+            {% endfor %}
+
+            <li {% if not pagination.has_next %}class="disabled">
+                <a href="">&raquo;</a>
+                {% else %}>
+                <a href="{{ url_for(destination) }}?page={{ pagination.next_page }}">&raquo;</a>
+                {%  endif %}
+            </li>
+        </ul>
+    {% endif %}
+{% endmacro %}
+
 {% block content %}
 
-    <h1>Yo, you made it!</h1>
+    <h1>Flask Casts!</h1>
+    {% for post in paginated_posts.items  %}
+        <h2>{{ post.title }}</h2>
+        <p>posted by:
+        {{ post.author }}
+        </p>
+    {% endfor %}
 
+    {{ paginate(paginated_posts, 'home.index') }}
 {% endblock %}
+
+
+
