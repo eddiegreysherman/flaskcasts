@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, request
 from flaskcasts import mongo
 from flask_pymongo import pymongo
-from flaskcasts.common.pagination import Pagination, paginate
+from flaskcasts.common.pagination import paginate
 
 home = Blueprint('home', __name__)
 
