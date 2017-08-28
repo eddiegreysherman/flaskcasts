@@ -1,8 +1,5 @@
 import datetime
 import uuid
-
-from flask import flash
-
 from flaskcasts import mongo
 from slugify import slugify
 from flask_pymongo import pymongo

@@ -31,12 +31,15 @@ def login():
         try:
             if User.is_login_valid(email, password):
                 session['email'] = email
-                return redirect(url_for('home'))
+                flash('You are now logged in.', 'success')
+                return redirect(url_for('home.index'))
         except UserError.UserError as e:
             # Flash message...
-            flash(e.message)
+            flash(e.message, 'danger')
             return render_template('home/login.html')
 
+    if session['email'] is not None:
+        flash('You are already logged in!', 'warning')
     return render_template('home/login.html')
 
 @home.route('/create', methods=['GET', 'POST'])
