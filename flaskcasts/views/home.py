@@ -1,7 +1,8 @@
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template, request, session, redirect, url_for
 from flaskcasts.models import Post, User
 from flaskcasts.common.pagination import paginate
 from flaskcasts.common.decorators import requires_login
+import flaskcasts.common.user_errors as UserError
 
 home = Blueprint('home', __name__)
 
@@ -26,7 +27,14 @@ def login():
     if request.method == 'POST':
         email = request.form['email']
         password = request.form['password']
-        pass
+
+        try:
+            if User.is_login_valid(email, password):
+                session['email'] = email
+                return redirect(url_for('home'))
+        except UserError.UserError as e:
+            # Flash message...
+            return e.message
 
     return render_template('home/login.html')
 

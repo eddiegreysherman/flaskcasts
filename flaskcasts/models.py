@@ -7,6 +7,7 @@ from flaskcasts import mongo
 from slugify import slugify
 from flask_pymongo import pymongo
 from flaskcasts.common.utils import Utils
+import flaskcasts.common.user_errors as UserError
 
 ##########################
 #                        #
@@ -43,10 +44,10 @@ class User(object):
         user_data = mongo.db.users.find_one({"email": email})
         if user_data is None:
             # Email doesn't exist.
-            return False
+            raise UserError.UserNotExistsError("Email is not registered.")
         if not Utils.check_hashed_password(password, user_data['password']):
             # Password is incorrect.
-            return False
+            raise UserError.IncorrectPasswordError("Password is incorrect.")
 
         return True
 
