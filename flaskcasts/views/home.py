@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, session, redirect, url_for
+from flask import Blueprint, render_template, request, session, redirect, url_for, flash
 from flaskcasts.models import Post, User
 from flaskcasts.common.pagination import paginate
 from flaskcasts.common.decorators import requires_login
@@ -34,7 +34,8 @@ def login():
                 return redirect(url_for('home'))
         except UserError.UserError as e:
             # Flash message...
-            return e.message
+            flash(e.message)
+            return render_template('home/login.html')
 
     return render_template('home/login.html')
 
