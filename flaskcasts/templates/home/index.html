@@ -7,20 +7,20 @@
             <li {% if not pagination.has_prev %}class="disabled">
                 <a href="">&laquo;</a>
                 {% else %}>
-                <a href="{{ url_for(destination) }}?page={{ pagination.prev_page }}">&laquo;</a>
+                <a href="{{ url_for(destination) }}page/{{ pagination.prev_page }}">&laquo;</a>
                 {%  endif %}
             </li>
 
             {% for i in range(1, pagination.num_pages + 1) %}
                 <li {% if paginated_posts.page == i %}class="active"{% endif %}>
-                    <a href="{{ url_for(destination) }}?page={{ i }}">{{ i }}</a>
+                    <a href="{{ url_for(destination) }}page/{{ i }}">{{ i }}</a>
                 </li>
             {% endfor %}
 
             <li {% if not pagination.has_next %}class="disabled">
                 <a href="">&raquo;</a>
                 {% else %}>
-                <a href="{{ url_for(destination) }}?page={{ pagination.next_page }}">&raquo;</a>
+                <a href="{{ url_for(destination) }}page/{{ pagination.next_page }}">&raquo;</a>
                 {%  endif %}
             </li>
         </ul>
@@ -32,7 +32,7 @@
 
     <h1>Flask Casts!</h1>
     {% for post in paginated_posts.items  %}
-        <h2>{{ post.title }}</h2>
+        <h2><a href="{{ url_for('home.post', slug=post.slug) }}">{{ post.title }}</h2></a>
         <p>posted by:
         {{ post.author }}
         </p>

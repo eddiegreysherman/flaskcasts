@@ -1,6 +1,7 @@
 from flaskcasts import *
 from mimesis import Text, Personal
 from flaskcasts.models import User, Post
+from slugify import slugify
 en = Text('en')
 
 # with app.app_context():
@@ -11,7 +12,7 @@ en = Text('en')
 #
 #     eddiegrey.save()
 
-with app.app_context():
-    for i in range(20):
-        post = Post(en.sentence(), en.text(), 'eddiegrey')
-        post.save()
+# with app.app_context():
+#     for i in range(20):
+#         post = Post(en.sentence(), en.text(), 'eddiegrey')
+#         post.save()

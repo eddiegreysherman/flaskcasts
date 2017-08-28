@@ -1,0 +1,12 @@
+{% extends 'home/layout.html' %}
+
+{% block content %}
+
+    <div class="page-header">
+        <h1>{{ post.title }}</h1>
+        <small>Posted: {{ post.created }} by {{ author }}</small>
+    </div>
+
+    <p class="lead">{{ post.content }}</p>
+
+{% endblock %}
