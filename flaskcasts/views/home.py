@@ -23,6 +23,11 @@ def post(slug):
 
 @home.route('/login', methods=['GET', 'POST'])
 def login():
+    if request.method == 'POST':
+        email = request.form['email']
+        password = request.form['password']
+        pass
+
     return render_template('home/login.html')
 
 @home.route('/create', methods=['GET', 'POST'])

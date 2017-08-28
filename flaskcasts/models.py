@@ -1,9 +1,12 @@
 import datetime
 import uuid
 
+from flask import flash
+
 from flaskcasts import mongo
 from slugify import slugify
 from flask_pymongo import pymongo
+from flaskcasts.common.utils import Utils
 
 ##########################
 #                        #
@@ -17,7 +20,7 @@ class User(object):
     def __init__(self, _id, email, password, fullname):
         self._id = _id # username, unique
         self.email = email
-        self.password = password
+        self.password = Utils.hash_password(password)
         self.fullname = fullname
 
     def __repr__(self):
@@ -34,6 +37,20 @@ class User(object):
     @staticmethod
     def get_user(user_id):
         return mongo.db.users.find_one({"_id": user_id})
+
+    @staticmethod
+    def is_login_valid(email, password):
+        user_data = mongo.db.users.find_one({"email": email})
+        if user_data is None:
+            # Email doesn't exist.
+            return False
+        if not Utils.check_hashed_password(password, user_data['password']):
+            # Password is incorrect.
+            return False
+
+        return True
+
+
 
     def save(self):
         mongo.db.users.update({"_id": self._id}, self.json(), upsert=True)
@@ -64,6 +81,7 @@ class Post(object):
 
     def json(self):
         return {
+            "_id": self._id,
             "title": self.title,
             "slug": self.slug,
             "content": self.content,
@@ -80,6 +98,6 @@ class Post(object):
         return mongo.db.posts.find_one({key: val})
 
     def save(self):
-        mongo.db.posts.update({'slug': self.slug}, self.json(), upsert=True)
+        mongo.db.posts.update({'_id': self._id}, self.json(), upsert=True)
 
 
