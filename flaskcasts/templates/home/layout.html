@@ -41,5 +41,8 @@
     {% endblock %}
 </div>
 
+{% if session['logged_in'] %}
+    <a href="{{ url_for('home.logout') }}">Log out</a>
+{% endif %}
 </body>
 </html>

@@ -31,16 +31,28 @@ def login():
         try:
             if User.is_login_valid(email, password):
                 session['email'] = email
+                session['logged_in'] = True
                 flash('You are now logged in.', 'success')
-                return redirect(url_for('home.index'))
+                return redirect(url_for('.index'))
         except UserError.UserError as e:
             # Flash message...
             flash(e.message, 'danger')
             return render_template('home/login.html')
 
-    if session['email'] is not None:
-        flash('You are already logged in!', 'warning')
     return render_template('home/login.html')
+
+@home.route('/logout')
+def logout():
+    if session['logged_in']:
+        # Log out the user.
+        session['email'] = None
+        session['logged_in'] = False
+        flash("You are now logged out", 'success')
+        return redirect(url_for('.index'))
+    else:
+        flash("You have to login before you can logout!", 'warning')
+        return render_template('home/login.html')
+
 
 @home.route('/create', methods=['GET', 'POST'])
 @requires_login
