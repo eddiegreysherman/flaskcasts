@@ -37,11 +37,11 @@ class User(object):
         return mongo.db.users.find_one({"_id": user_id})
 
     @staticmethod
-    def is_login_valid(email, password):
-        user_data = mongo.db.users.find_one({"email": email})
+    def is_login_valid(user_id, password):
+        user_data = mongo.db.users.find_one({"_id": user_id})
         if user_data is None:
             # Email doesn't exist.
-            raise UserError.UserNotExistsError("Email is not registered.")
+            raise UserError.UserNotExistsError("User is not registered.")
         if not Utils.check_hashed_password(password, user_data['password']):
             # Password is incorrect.
             raise UserError.IncorrectPasswordError("Password is incorrect.")
@@ -68,7 +68,7 @@ class Post(object):
     def __init__(self, title, content, author, created=None):
         self._id = uuid.uuid4().hex
         self.title = title
-        self.slug = slugify(title)
+        self.slug = slugify(title)  # we are linking to posts with this slug...needs uniqueness
         self.content = content
         self.author = author
         self.created = datetime.datetime.utcnow().strftime('%A %x @ %H:%M:%S') \

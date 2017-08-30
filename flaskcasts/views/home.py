@@ -25,12 +25,12 @@ def post(slug):
 @home.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
-        email = request.form['email']
+        email = request.form['user_id']
         password = request.form['password']
 
         try:
             if User.is_login_valid(email, password):
-                session['email'] = email
+                session['user_id'] = email
                 session['logged_in'] = True
                 flash('You are now logged in.', 'success')
                 return redirect(url_for('.index'))
@@ -43,10 +43,9 @@ def login():
 
 @home.route('/logout')
 def logout():
-    if session['logged_in']:
+    if session.get('logged_in'):
         # Log out the user.
-        session['email'] = None
-        session['logged_in'] = False
+        session.clear()
         flash("You are now logged out", 'success')
         return redirect(url_for('.index'))
     else:
@@ -63,4 +62,4 @@ def create():
 @home.route('/edit/<int:post_id>', methods=['GET', 'POST'])
 @requires_login
 def edit(post_id):
-    pass
+    return render_template('home/edit.html')
