@@ -20,8 +20,14 @@
             <a href="#">Contact</a>
         </li>
     </ul>
+    <ul class="nav navbar-nav navbar-right">
+        {% if session['logged_in'] %}
+            <li>
+                <a href="{{ url_for('home.logout') }}">Log Out</a>
+            </li>
+        {% endif %}
+    </ul>
 </nav>
-
 <div class="container">
 
     {% with messages = get_flashed_messages(with_categories=true) %}
@@ -41,8 +47,5 @@
     {% endblock %}
 </div>
 
-{% if session['logged_in'] %}
-    <a href="{{ url_for('home.logout') }}">Log out</a>
-{% endif %}
 </body>
 </html>

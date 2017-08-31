@@ -33,8 +33,8 @@ class User(object):
         }
 
     @staticmethod
-    def get_user(user_id):
-        return mongo.db.users.find_one({"_id": user_id})
+    def get_user(key, val):
+        return mongo.db.users.find_one({key: val})
 
     @staticmethod
     def is_login_valid(user_id, password):
@@ -98,4 +98,6 @@ class Post(object):
     def save(self):
         mongo.db.posts.update({'_id': self._id}, self.json(), upsert=True)
 
-
+    @staticmethod
+    def update(post_id, title, content):
+        mongo.db.posts.update({'_id': post_id}, {'$set': {"title": title, "content": content}})

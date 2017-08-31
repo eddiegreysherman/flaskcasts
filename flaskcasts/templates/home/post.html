@@ -9,4 +9,8 @@
 
     <p class="lead">{{ post.content }}</p>
 
+    {% if session['logged_in'] %}
+        <a href="{{ url_for('home.edit', post_id=post._id) }}" class="btn btn-success">Edit this post</a>
+    {% endif %}
+
 {% endblock %}

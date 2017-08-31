@@ -2,9 +2,10 @@ from flask import Blueprint, render_template, request, session, redirect, url_fo
 from flaskcasts.models import Post, User
 from flaskcasts.common.pagination import paginate
 from flaskcasts.common.decorators import requires_login
-import flaskcasts.common.user_errors as UserError
+import flaskcasts.common.user_errors as error
 
 home = Blueprint('home', __name__)
+
 
 @home.route('/')
 @home.route('/page/<int:page>')
@@ -18,24 +19,24 @@ def index(page=1):
 @home.route('/post/<string:slug>')
 def post(slug):
     post = Post.get_post('slug', slug)
-    author = User.get_user(post['author'])
+    author = User.get_user("_id", post['author'])
     return render_template('home/post.html', post=post, author=author['fullname'])
 
 
 @home.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
-        email = request.form['user_id']
+        user_id = request.form['user_id']
         password = request.form['password']
 
         try:
-            if User.is_login_valid(email, password):
-                session['user_id'] = email
+            if User.is_login_valid(user_id, password):
+                session['user_id'] = user_id
                 session['logged_in'] = True
                 flash('You are now logged in.', 'success')
                 return redirect(url_for('.index'))
-        except UserError.UserError as e:
-            # Flash message...
+        except error.UserError as e:
+            # Flash error message...
             flash(e.message, 'danger')
             return render_template('home/login.html')
 
@@ -59,7 +60,16 @@ def create():
     pass
 
 
-@home.route('/edit/<int:post_id>', methods=['GET', 'POST'])
+@home.route('/edit/<string:post_id>', methods=['GET', 'POST'])
 @requires_login
 def edit(post_id):
-    return render_template('home/edit.html')
+    if request.method == 'POST':
+        title = request.form['title']
+        content = request.form['content']
+        slug = request.form['slug'] # for redirect purposes only
+        Post.update(post_id, title, content)
+        flash('Post successfully updated!!!', 'success')
+        return redirect(url_for('home.post', slug=slug))
+
+    post = Post.get_post("_id", post_id)
+    return render_template('home/edit.html', post=post)
