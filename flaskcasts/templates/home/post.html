@@ -7,7 +7,7 @@
         <small>Posted: {{ post.created }} by {{ author }}</small>
     </div>
 
-    <p class="lead">{{ post.content }}</p>
+    <p class="lead">{{ post.content | safe }}</p>
 
     {% if session['logged_in'] %}
         <a href="{{ url_for('home.edit', post_id=post._id) }}" class="btn btn-success">Edit this post</a>

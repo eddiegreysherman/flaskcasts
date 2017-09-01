@@ -3,6 +3,7 @@ from flaskcasts.models import Post, User
 from flaskcasts.common.pagination import paginate
 from flaskcasts.common.decorators import requires_login
 import flaskcasts.common.user_errors as error
+import random
 
 home = Blueprint('home', __name__)
 
@@ -57,7 +58,24 @@ def logout():
 @home.route('/create', methods=['GET', 'POST'])
 @requires_login
 def create():
-    pass
+    # IF method = post, process the new post.
+    # we need to make sure the slug generated is not a duplicate
+    # if so, we will append a random number
+    if request.method == 'POST':
+        new_post = Post(request.form['title'],
+                        request.form['content'],
+                        session['user_id'])
+        if Post.get_post('slug', new_post.slug) is None:
+            # if there are no posts with this slug
+            new_post.save()
+        else:
+            # append a random number string to the end of the slug
+            new_post.slug += str(random.randint(0,100))
+            new_post.save()
+        flash('New post created.', 'success')
+        return redirect(url_for('home.post', slug=new_post.slug))
+
+    return render_template('home/create.html')
 
 
 @home.route('/edit/<string:post_id>', methods=['GET', 'POST'])
@@ -66,10 +84,18 @@ def edit(post_id):
     if request.method == 'POST':
         title = request.form['title']
         content = request.form['content']
-        slug = request.form['slug'] # for redirect purposes only
         Post.update(post_id, title, content)
         flash('Post successfully updated!!!', 'success')
-        return redirect(url_for('home.post', slug=slug))
+        return redirect(url_for('home.post',
+                                slug=Post.get_post("_id", post_id)['slug']))
 
     post = Post.get_post("_id", post_id)
     return render_template('home/edit.html', post=post)
+
+@home.route('/about')
+def about():
+    return render_template('home/about.html')
+
+@home.route('/contact')
+def contact():
+    return render_template('home/contact.html')

@@ -32,3 +32,11 @@
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+
+.container{
+  max-width: 800px;
+}
+
+.navbar{
+  margin-top: 25px;
+}

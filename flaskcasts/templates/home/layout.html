@@ -9,26 +9,30 @@
 </head>
 <body>
 
+<div class="container">
 
 <nav class="navbar navbar-inverse">
     <a class="navbar-brand" href="/"> <img src="{{ url_for('static', filename='logo.jpg') }}" alt="" height="50"></a>
     <ul class="nav navbar-nav">
         <li>
-            <a href="#">About</a>
+            <a href="{{ url_for('home.about') }}">About</a>
         </li>
         <li>
-            <a href="#">Contact</a>
+            <a href="{{ url_for('home.contact') }}">Contact</a>
         </li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
         {% if session['logged_in'] %}
+            <li>
+                <a href="{{ url_for('home.create') }}">New Post</a>
+            </li>
             <li>
                 <a href="{{ url_for('home.logout') }}">Log Out</a>
             </li>
         {% endif %}
     </ul>
 </nav>
-<div class="container">
+
 
     {% with messages = get_flashed_messages(with_categories=true) %}
       <!-- Categories: success (green), info (blue), warning (yellow), danger (red) -->

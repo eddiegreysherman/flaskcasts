@@ -13,10 +13,12 @@ import flaskcasts.common.user_errors as UserError
 #                        #
 #                        #
 ##########################
+
+
 class User(object):
 
     def __init__(self, _id, email, password, fullname):
-        self._id = _id # username, unique
+        self._id = _id  # username, unique
         self.email = email
         self.password = Utils.hash_password(password)
         self.fullname = fullname
@@ -62,6 +64,7 @@ class User(object):
 #                        #
 ##########################
 
+
 class Post(object):
 
 
@@ -89,7 +92,7 @@ class Post(object):
 
     @staticmethod
     def all_desc():
-        return mongo.db.posts.find().sort('created', pymongo.DESCENDING)
+        return mongo.db.posts.find().sort('created', pymongo.ASCENDING)
 
     @staticmethod
     def get_post(key, val):

@@ -3,6 +3,7 @@
 {# Jinja2 macro #}
 {% macro paginate(pagination, destination, small=False) %}
     {% if pagination.num_pages > 1 %}
+        <div class="text-center">
         <ul class="pagination {% if small %}pagination-sm{% endif %}" id="pagination">
             <li {% if not pagination.has_prev %}class="disabled">
                 <a href="">&laquo;</a>
@@ -24,18 +25,27 @@
                 {%  endif %}
             </li>
         </ul>
+        </div>
     {% endif %}
 {% endmacro %}
 
 
 {% block content %}
-
-    <h1>Flask Casts!</h1>
     {% for post in paginated_posts.items  %}
-        <h2><a href="{{ url_for('home.post', slug=post.slug) }}">{{ post.title }}</h2></a>
-        <p>posted by:
-        {{ post.author }}
-        </p>
+        <div class="text-center">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            {% if session['logged_in'] %}
+                <h3><a href="{{ url_for('home.post', slug=post.slug) }}">{{ post.title }}</h3></a>
+            {% else %}
+                <h3>{{ post.title }}</h3>
+            {% endif %}
+        </div>
+        <div class="panel-body">
+            {{ post.content | safe }}
+        </div>
+    </div>
+        </div>
     {% endfor %}
 
     {{ paginate(paginated_posts, 'home.index') }}
