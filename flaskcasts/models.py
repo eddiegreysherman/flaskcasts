@@ -92,7 +92,7 @@ class Post(object):
 
     @staticmethod
     def all_desc():
-        return mongo.db.posts.find().sort('created', pymongo.ASCENDING)
+        return mongo.db.posts.find().sort('created', pymongo.DESCENDING)
 
     @staticmethod
     def get_post(key, val):
@@ -104,3 +104,7 @@ class Post(object):
     @staticmethod
     def update(post_id, title, content):
         mongo.db.posts.update({'_id': post_id}, {'$set': {"title": title, "content": content}})
+
+    @staticmethod
+    def delete_post(post_id):
+        mongo.db.posts.remove({"id": post_id})
