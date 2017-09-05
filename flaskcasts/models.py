@@ -92,7 +92,7 @@ class Post(object):
 
     @staticmethod
     def all_desc():
-        return mongo.db.posts.find().sort('created', pymongo.ASCENDING)
+        return mongo.db.posts.find().sort('created', pymongo.DESCENDING)
 
     @staticmethod
     def get_post(key, val):
