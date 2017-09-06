@@ -1,21 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3435c78d-7aa8-47db-8f4b-6b7151373415" name="Default" comment="ok">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/e6dfb4fe-cb65-46d4-8425-bebed0cf6fa8/_metadata_/metadata" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/e6dfb4fe-cb65-46d4-8425-bebed0cf6fa8/_metadata_/metadata.keystream" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/e6dfb4fe-cb65-46d4-8425-bebed0cf6fa8/_metadata_/metadata.keystream.len" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/e6dfb4fe-cb65-46d4-8425-bebed0cf6fa8/_metadata_/metadata.len" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/e6dfb4fe-cb65-46d4-8425-bebed0cf6fa8/_metadata_/metadata.values.at" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/e6dfb4fe-cb65-46d4-8425-bebed0cf6fa8/_metadata_/metadata_i" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/e6dfb4fe-cb65-46d4-8425-bebed0cf6fa8/_metadata_/metadata_i.len" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/e6dfb4fe-cb65-46d4-8425-bebed0cf6fa8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/flaskcasts.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    <list default="true" id="3435c78d-7aa8-47db-8f4b-6b7151373415" name="Default" comment="configuration settings">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.py" afterPath="$PROJECT_DIR$/config.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/flaskcasts$run.coverage" NAME="run Coverage Results" MODIFIED="1504287443556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/flaskcasts$run.coverage" NAME="run Coverage Results" MODIFIED="1504696548794" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/flaskcasts$manage.coverage" NAME="manage Coverage Results" MODIFIED="1504269484037" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/flaskcasts$app.coverage" NAME="app Coverage Results" MODIFIED="1503443790767" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
@@ -68,7 +56,7 @@
             <entry file="file://$PROJECT_DIR$/flaskcasts/templates/home/contact.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="210">
-                  <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+                  <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
                   <folding />
                 </state>
               </provider>
@@ -91,7 +79,7 @@
           <file leaf-file-name="home.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/flaskcasts/views/home.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
+                <state relative-caret-position="1995">
                   <caret line="100" column="45" lean-forward="false" selection-start-line="100" selection-start-column="45" selection-end-line="100" selection-end-column="45" />
                   <folding>
                     <element signature="e#0#88#0" expanded="true" />
@@ -100,10 +88,52 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/flaskcasts/__init__.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="84">
+                  <caret line="6" column="39" lean-forward="false" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+                  <folding>
+                    <element signature="e#0#23#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="config.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/instance/config.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="42">
+                  <caret line="2" column="27" lean-forward="false" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/.gitignore">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="21">
+                  <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/config.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="42">
+                  <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/flaskcasts/models.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="529">
+                <state relative-caret-position="2142">
                   <caret line="108" column="29" lean-forward="false" selection-start-line="108" selection-start-column="29" selection-end-line="108" selection-end-column="29" />
                   <folding />
                 </state>
@@ -129,14 +159,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/run.py" />
-        <option value="$PROJECT_DIR$/instance/config.py" />
         <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/flaskcasts/views.py" />
         <option value="$PROJECT_DIR$/run.py" />
-        <option value="$PROJECT_DIR$/flaskcasts/__init__.py" />
         <option value="$PROJECT_DIR$/flaskcasts/manage.py" />
         <option value="$PROJECT_DIR$/flaskcasts/common/pagination.py" />
-        <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/flaskcasts/common/utils.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/manage.py" />
@@ -151,6 +178,10 @@
         <option value="$PROJECT_DIR$/flaskcasts/templates/home/layout.html" />
         <option value="$PROJECT_DIR$/flaskcasts/views/home.py" />
         <option value="$PROJECT_DIR$/flaskcasts/models.py" />
+        <option value="$PROJECT_DIR$/flaskcasts/__init__.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/config.py" />
+        <option value="$PROJECT_DIR$/instance/config.py" />
       </list>
     </option>
   </component>
@@ -181,6 +212,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -197,25 +229,12 @@
             <path>
               <item name="flaskcasts" type="b2602c69:ProjectViewProjectNode" />
               <item name="flaskcasts" type="462c0819:PsiDirectoryNode" />
-              <item name="flaskcasts" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flaskcasts" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flaskcasts" type="462c0819:PsiDirectoryNode" />
-              <item name="flaskcasts" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flaskcasts" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flaskcasts" type="462c0819:PsiDirectoryNode" />
               <item name="instance" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -401,7 +420,21 @@
       <option name="project" value="LOCAL" />
       <updated>1504650443323</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="ok">
+      <created>1504654297096</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1504654297096</updated>
+    </task>
+    <task id="LOCAL-00013" summary="configuration settings">
+      <created>1504696606149</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1504696606149</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TodoView">
@@ -417,15 +450,15 @@
     <frame x="898" y="0" width="1922" height="1047" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08484525" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08591249" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22294372" sideWeight="0.50213444" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32973504" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1612554" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3452381" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22294372" sideWeight="0.49786553" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5422078" sideWeight="0.49786553" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997833" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -473,7 +506,8 @@
     <MESSAGE value="Error handling with the UserError class" />
     <MESSAGE value="delete post added." />
     <MESSAGE value="ok" />
-    <option name="LAST_COMMIT_MESSAGE" value="ok" />
+    <MESSAGE value="configuration settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="configuration settings" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -482,13 +516,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/run.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/flaskcasts/views/home.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -661,13 +688,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="27" lean-forward="false" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -693,13 +713,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flaskcasts/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -766,14 +779,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flaskcasts/templates/home/contact.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/flaskcasts/common/decorators.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -788,9 +793,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flaskcasts/views/home.py">
+    <entry file="file://$PROJECT_DIR$/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flaskcasts/views/home.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1995">
           <caret line="100" column="45" lean-forward="false" selection-start-line="100" selection-start-column="45" selection-end-line="100" selection-end-column="45" />
           <folding>
             <element signature="e#0#88#0" expanded="true" />
@@ -798,26 +810,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/instance/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/flaskcasts/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
+        <state relative-caret-position="2142">
           <caret line="108" column="29" lean-forward="false" selection-start-line="108" selection-start-column="29" selection-end-line="108" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flaskcasts/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="6" column="39" lean-forward="false" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flaskcasts/templates/home/contact.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/instance/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="27" lean-forward="false" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
           <folding />
         </state>
       </provider>

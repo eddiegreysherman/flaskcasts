@@ -1,3 +1,3 @@
 DEBUG = False
 MONGO_DBNAME = 'flaskcasts'
-SECRET_KEY = 'SECRET'
+SECRET_KEY = '1111S3Cr3tK37'
