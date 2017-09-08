@@ -74,7 +74,7 @@ class Post(object):
         self.slug = slugify(title)  # we are linking to posts with this slug...needs uniqueness
         self.content = content
         self.author = author
-        self.created = datetime.datetime.utcnow().strftime('%A %x @ %H:%M:%S') \
+        self.created = datetime.datetime.utcnow().strftime('%x @ %H:%M:%S') \
             if created is None else created
 
     def __repr__(self):
