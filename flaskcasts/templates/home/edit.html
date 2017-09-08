@@ -1,7 +1,7 @@
 {% extends 'home/layout.html' %}
 {% block content %}
     <form method="post">
-        <legend>Edit Post: <small>{{ post._id }}</small></legend>
+        <legend>Edit Post: <small>{{ post._id }}</small>    <a href="{{ url_for('home.remove', post_id=post._id) }}" class="btn btn-danger btn-sm"  onclick="return confirm('Are you sure you want to delete this item?');">Remove Post</a></legend>
 
         <div class="form-group">
             <label for="title">Title</label>
@@ -14,4 +14,5 @@
 
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+
 {% endblock %}

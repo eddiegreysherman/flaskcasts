@@ -49,3 +49,7 @@
 .navbar-right{
   padding-right: 11px;
 }
+
+a.btn{
+  margin-bottom: 10px;
+}

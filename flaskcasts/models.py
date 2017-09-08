@@ -106,5 +106,6 @@ class Post(object):
         mongo.db.posts.update({'_id': post_id}, {'$set': {"title": title, "content": content}})
 
     @staticmethod
-    def delete_post(post_id):
-        mongo.db.posts.remove({"id": post_id})
+    def remove_post(post_id):
+        post = mongo.db.posts.find_one({"_id": post_id})
+        mongo.db.posts.remove(post)

@@ -92,6 +92,13 @@ def edit(post_id):
     post = Post.get_post("_id", post_id)
     return render_template('home/edit.html', post=post)
 
+@home.route('/remove/<string:post_id>')
+@requires_login
+def remove(post_id):
+    Post.remove_post(post_id)
+    flash("Post: {} removed.".format(post_id), 'warning')
+    return redirect(url_for('.index'))
+
 @home.route('/about')
 def about():
     return render_template('home/about.html')
